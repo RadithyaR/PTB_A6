@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Kpunand"
         tools:targetApi="31">
         <activity
+            android:name=".LaporanMahasiswaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListLaporanActivity"
             android:exported="false" />
         <activity
