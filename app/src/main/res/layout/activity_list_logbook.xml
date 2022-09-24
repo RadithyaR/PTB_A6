@@ -73,10 +73,11 @@
             android:id="@+id/detail1"
             android:layout_width="24sp"
             android:layout_height="24sp"
-            android:background="#c5c5c5"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/info" />
+            android:background="#c5c5c5"
+            app:srcCompat="@drawable/info"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </androidx.cardview.widget.CardView>
 
