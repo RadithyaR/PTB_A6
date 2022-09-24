@@ -13,7 +13,7 @@
         android:layout_marginTop="25dp"
         android:text="Tolak"
         android:textStyle="bold"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#E76A6A"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintHorizontal_bias="1.0"
