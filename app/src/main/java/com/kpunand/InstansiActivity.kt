@@ -6,6 +6,6 @@ import android.os.Bundle
 class InstansiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_laporan)
+        setContentView(R.layout.activity_instansi)
     }
 }

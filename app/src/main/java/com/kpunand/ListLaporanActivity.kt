@@ -6,6 +6,6 @@ import android.os.Bundle
 class ListLaporanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_instansi)
+        setContentView(R.layout.activity_list_laporan)
     }
 }

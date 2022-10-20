@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/unand"
-        android:label="KP UNAND"
+        android:label="@drawable/unand"
         android:roundIcon="@drawable/unand"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kpunand"
@@ -36,12 +36,6 @@
         <activity
             android:name=".DataPembimbing"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
