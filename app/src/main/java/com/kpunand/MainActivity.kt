@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         }
         val buttonIns = findViewById<Button>(R.id.buttonInstansi)
         buttonIns.setOnClickListener{
-            val Intent = Intent(this, Instansi::class.java)
+            val Intent = Intent(this, InstansiActivity::class.java)
             startActivity(Intent)
         }
         val buttonLap = findViewById<Button>(R.id.buttonLaporan)
         buttonLap.setOnClickListener{
-            val Intent = Intent(this, ListLaporan::class.java)
+            val Intent = Intent(this, ListLaporanActivity::class.java)
             startActivity(Intent)
         }
     }
