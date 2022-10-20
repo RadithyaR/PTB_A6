@@ -6,62 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".UsulanKP">
 
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="355dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textUsulan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="29dp"
-        android:text="Mahasiswa yang Mengusulkan KP"
-        android:textSize="24sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="16dp"
+        android:text="Mahasiswa Mengusulkan KP"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="#C5DCFF"
-        android:text="Mahasiswa 1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="194dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="#C5DCFF"
-        android:text="Mahasiswa 2"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="187dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#C5DCFF"
-        android:text="Mahasiswa 3"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:ignore="TouchTargetSizeCheck" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textUsulan"
+        tools:listitem="@layout/item_mahasiswa_usulan_kp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

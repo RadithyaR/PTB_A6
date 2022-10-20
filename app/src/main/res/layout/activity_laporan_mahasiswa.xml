@@ -14,7 +14,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="355dp"
         android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/textLaporanMahasiswa"
+        app:layout_constraintBottom_toTopOf="@+id/textDetailMahasiswaKP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -98,10 +98,11 @@
         android:id="@+id/tolak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:backgroundTint="@color/red"
         android:text="Tolak"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="581dp" />
+        app:layout_constraintTop_toBottomOf="@+id/terima" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,80 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".ListLogbookActivity">
 
-    <ImageButton
+
+    <ImageView
         android:id="@+id/backButton"
-        android:background="#ffffff"
-        android:layout_width="25dp"
-        android:layout_height="26dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="355dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textLogbook"
+        android:layout_marginBottom="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:srcCompat="@drawable/arrow" />
 
     <TextView
         android:id="@+id/textLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="LogBook Harian Mahasiswa"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="16dp"
+        android:text="Logbook Harian"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/hari1"
-        android:layout_width="315dp"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#c5c5c5"
-        app:cardCornerRadius="12dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogbook">
-
-        <TextView
-            android:id="@+id/senin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Hari / Tanggal"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tanggal1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="38dp"
-            android:text="Senin / 12-12-2022"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/detail1"
-            android:layout_width="24sp"
-            android:layout_height="24sp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="25dp"
-            android:background="#c5c5c5"
-            app:srcCompat="@drawable/info"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toBottomOf="@+id/textLogbook"
+        tools:listitem="@layout/item_logbookharian" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,9 @@
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/drawable/ic_laporan.xml" value="0.1775" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/drawable/ic_person_login.xml" value="0.2345" />
+        <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_data_pembimbing.xml" value="0.10989583333333333" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_detail_logbook.xml" value="0.15789473684210525" />
+        <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_detail_mahasiswa_kp.xml" value="0.10989583333333333" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_detail_usulan_kp.xml" value="0.23007246376811594" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_home_screen.xml" value="0.23007246376811594" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/activity_instansi.xml" value="0.23007246376811594" />
@@ -23,7 +25,8 @@
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/fragment_laporan.xml" value="0.18840579710144928" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/fragment_usulan.xml" value="0.18840579710144928" />
-        <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/item_mahasiswa.xml" value="0.5946843853820598" />
+        <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/item_mahasiswa.xml" value="0.4" />
+        <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/item_mahasiswa_usulan_kp.xml" value="0.4" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/logbook_harian.xml" value="0.18840579710144928" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/layout/recycle_view_template.xml" value="0.4" />
         <entry key="..\:/Kuliah/SEMESTER5/kpunand/app/src/main/res/menu/bottom_menu.xml" value="0.25" />

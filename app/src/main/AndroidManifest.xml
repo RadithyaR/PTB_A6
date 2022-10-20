@@ -55,7 +55,7 @@
             android:name=".ListLaporanActivity"
             android:exported="false" />
         <activity
-            android:name=".InstantiActivity"
+            android:name=".InstansiActivity"
             android:exported="false" />
         <activity
             android:name=".DetailLogbookActivity"
