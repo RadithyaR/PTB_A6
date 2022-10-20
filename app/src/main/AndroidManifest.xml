@@ -24,9 +24,6 @@
             android:name=".UsulanKP"
             android:exported="false" />
         <activity
-            android:name=".LockScreen"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:theme="@style/Theme.KpunandNoActionBar"
             android:exported="true" >
