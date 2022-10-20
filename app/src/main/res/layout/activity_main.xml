@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main">
 
 
     <TextView
@@ -75,9 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#C5DCFF"
+        android:backgroundTint="@color/blue"
         android:text="List Instansi"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/buttonLaporan"
         app:layout_constraintEnd_toEndOf="@+id/buttonUsulan"
         app:layout_constraintStart_toStartOf="@+id/buttonUsulan"
@@ -90,9 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="279dp"
-        android:backgroundTint="#C5DCFF"
+        android:backgroundTint="@color/blue"
         android:text="List Laporan"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonInstansi"
         app:layout_constraintStart_toStartOf="@+id/buttonInstansi"

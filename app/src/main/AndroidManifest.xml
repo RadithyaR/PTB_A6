@@ -41,7 +41,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailMahasiswaKPActivity"
+            android:name=".DetailMahasiswaKP"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -51,7 +51,7 @@
             android:name=".DetailUsulanKP"
             android:exported="false" />
         <activity
-            android:name=".MahasiswaKPActivity"
+            android:name=".ListMahasiswaKP"
             android:exported="false" />
         <activity
             android:name=".UsulanKP"
@@ -67,22 +67,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListLaporanActivity"
+            android:name=".ListLaporan"
             android:exported="false" />
         <activity
-            android:name=".InstansiActivity"
+            android:name=".Instansi"
             android:exported="false" />
         <activity
-            android:name=".DetailLogbookActivity"
+            android:name=".DetailLogbook"
             android:exported="false" />
         <activity
-            android:name=".ListLogbookActivity"
+            android:name=".ListLogbook"
             android:exported="false" />
         <activity
             android:name=".DetailLaporan"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Main"
             android:exported="false" />
     </application>
 
