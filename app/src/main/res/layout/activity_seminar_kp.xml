@@ -14,7 +14,7 @@
         android:background="#ffffff"
         app:layout_constraintStart_toStartOf="@+id/textSeminarKP"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow"
+        app:srcCompat="@drawable/ic_back"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
