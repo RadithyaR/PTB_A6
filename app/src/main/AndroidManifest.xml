@@ -41,7 +41,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailMahasiswaKPActivity"
+            android:name=".DetailMahasiswaKP"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -51,7 +51,7 @@
             android:name=".DetailUsulanKP"
             android:exported="false" />
         <activity
-            android:name=".MahasiswaKPActivity"
+            android:name=".MahasiswaKP"
             android:exported="false" />
         <activity
             android:name=".UsulanKP"
