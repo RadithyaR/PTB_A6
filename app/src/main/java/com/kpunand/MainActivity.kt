@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
         val buttonUsul = findViewById<Button>(R.id.buttonUsulan)
         buttonUsul.setOnClickListener{
-            val Intent = Intent(this, UsulanKP::class.java)
+            val Intent = Intent(this, UsulanKPActivity::class.java)
             startActivity(Intent)
         }
         val buttonIns = findViewById<Button>(R.id.buttonInstansi)

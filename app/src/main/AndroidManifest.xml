@@ -13,28 +13,28 @@
         android:theme="@style/Theme.Kpunand"
         tools:targetApi="31">
         <activity
-            android:name=".PembatalanKP"
+            android:name=".PembatalanKPActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SeminarKP"
+            android:name=".SeminarKPActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".TambahPembimbingKP"
+            android:name=".TambahPembimbingKPActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DataPembimbing"
+            android:name=".DataPembimbingActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -48,13 +48,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailUsulanKP"
+            android:name=".DetailUsulanKPActivity"
             android:exported="false" />
         <activity
             android:name=".MahasiswaKPActivity"
             android:exported="false" />
         <activity
-            android:name=".UsulanKP"
+            android:name=".UsulanKPActivity"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -79,7 +79,7 @@
             android:name=".ListLogbookActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailLaporan"
+            android:name=".DetailLaporanActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
