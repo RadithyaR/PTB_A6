@@ -15,7 +15,7 @@
         android:background="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow"
+        app:srcCompat="@drawable/ic_back"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
@@ -70,7 +70,7 @@
             android:layout_height="24sp"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/no"
+            app:srcCompat="@drawable/ic_no"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </androidx.cardview.widget.CardView>
