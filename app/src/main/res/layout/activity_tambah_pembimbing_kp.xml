@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataPembimbing">
+    tools:context=".TambahPembimbingKP">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -19,12 +19,12 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textDataPembimbing"
+        android:id="@+id/textTambahPembimbing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="38dp"
-        android:text="Data Pembimbing"
+        android:text="Tambah Pembimbing"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -33,18 +33,18 @@
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/pembimbing"
+        android:id="@+id/lokasi"
         android:layout_width="315dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="56dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDataPembimbing">
+        app:layout_constraintTop_toBottomOf="@+id/textTambahPembimbing">
 
 
         <ImageView
@@ -71,21 +71,9 @@
             android:layout_height="24sp"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/no"
+            app:srcCompat="@drawable/ic_add"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/tambahPembimbing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="#027FFF"
-        android:text="Tambah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
