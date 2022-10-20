@@ -4,10 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonMenu = findViewById<Button>(R.id.buttonMenumhs)
         buttonMenu.setOnClickListener{
-            val Intent = Intent(this, MahasiswaKP::class.java)
+            val Intent = Intent(this, MahasiswaKPActivity::class.java)
             startActivity(Intent)
         }
         val buttonUsul = findViewById<Button>(R.id.buttonUsulan)
