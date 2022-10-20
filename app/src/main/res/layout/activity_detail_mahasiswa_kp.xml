@@ -49,7 +49,6 @@
         android:backgroundTint="@color/blue"
         android:text="SeminarKP"
         android:textStyle="bold"
-        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/logbook"
         app:layout_constraintStart_toStartOf="@+id/logbook"
         app:layout_constraintTop_toBottomOf="@+id/logbook" />
@@ -62,7 +61,6 @@
         android:backgroundTint="@color/blue"
         android:text="Pembimbing"
         android:textStyle="bold"
-        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/seminarKP"
         app:layout_constraintStart_toStartOf="@+id/seminarKP"
         app:layout_constraintTop_toBottomOf="@+id/seminarKP" />
@@ -75,7 +73,6 @@
         android:backgroundTint="@color/blue"
         android:text="Nilai KP"
         android:textStyle="bold"
-        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/pembimbing"
         app:layout_constraintStart_toStartOf="@+id/pembimbing"
         app:layout_constraintTop_toBottomOf="@+id/pembimbing" />
