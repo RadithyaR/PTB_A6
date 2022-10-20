@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MahasiswaKP">
+    tools:context=".MahasiswaKPActivity">
 
 
     <ImageView
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rvmahasiswakp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -47,6 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textmhskp"
-        tools:listitem="@layout/item_mahasiswa_usulan_kp" />
+        tools:listitem="@layout/item_list_mahasiswa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
