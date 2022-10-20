@@ -4,12 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class Main : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         }
         val buttonIns = findViewById<Button>(R.id.buttonInstansi)
         buttonIns.setOnClickListener{
-            val Intent = Intent(this, InstansiActivity::class.java)
+            val Intent = Intent(this, Instansi::class.java)
             startActivity(Intent)
         }
         val buttonLap = findViewById<Button>(R.id.buttonLaporan)
         buttonLap.setOnClickListener{
-            val Intent = Intent(this, ListLaporanActivity::class.java)
+            val Intent = Intent(this, ListLaporan::class.java)
             startActivity(Intent)
         }
     }

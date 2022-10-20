@@ -13,50 +13,6 @@
         android:theme="@style/Theme.Kpunand"
         tools:targetApi="31">
         <activity
-            android:name=".PembatalanKP"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".SeminarKP"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".TambahPembimbingKP"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DataPembimbing"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DetailMahasiswaKP"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DetailUsulanKP"
-            android:exported="false" />
-        <activity
-            android:name=".MahasiswaKP"
-            android:exported="false" />
-        <activity
-            android:name=".UsulanKP"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="true"
             android:theme="@style/Theme.KpunandNoActionBar">
@@ -67,22 +23,46 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListLaporanActivity"
+            android:name=".Main"
             android:exported="false" />
         <activity
-            android:name=".InstansiActivity"
+            android:name=".UsulanKP"
             android:exported="false" />
         <activity
-            android:name=".DetailLogbookActivity"
+            android:name=".DetailUsulanKP"
             android:exported="false" />
         <activity
-            android:name=".ListLogbookActivity"
+            android:name=".MahasiswaKP"
             android:exported="false" />
         <activity
-            android:name=".LaporanMahasiswaActivity"
+            android:name=".DetailMahasiswaKP"
+            android:exported="false"/>
+        <activity
+            android:name=".DataPembimbing"
+            android:exported="false"/>
+        <activity
+            android:name=".TambahPembimbingKP"
+            android:exported="false"/>
+        <activity
+            android:name=".SeminarKP"
+            android:exported="false"/>
+        <activity
+            android:name=".PembatalanKP"
+            android:exported="false"/>
+        <activity
+            android:name=".ListLogbook"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DetailLogbook"
+            android:exported="false" />
+        <activity
+            android:name=".ListLaporan"
+            android:exported="false" />
+        <activity
+            android:name=".DetailLaporan"
+            android:exported="false" />
+        <activity
+            android:name=".Instansi"
             android:exported="false" />
     </application>
 
