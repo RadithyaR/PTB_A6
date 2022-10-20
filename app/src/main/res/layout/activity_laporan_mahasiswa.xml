@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/arrow" />
 
     <TextView
-        android:id="@+id/textLaporanMahasiswa"
+        android:id="@+id/textDetailMahasiswaKP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="33dp"
