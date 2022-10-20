@@ -26,7 +26,7 @@
             android:name=".Main"
             android:exported="false" />
         <activity
-            android:name=".UsulanKP"
+            android:name=".ListUsulanKP"
             android:exported="false" />
         <activity
             android:name=".DetailUsulanKP"

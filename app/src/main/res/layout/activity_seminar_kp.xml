@@ -10,9 +10,10 @@
         android:id="@+id/backButton"
         android:layout_width="25dp"
         android:layout_height="26dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:background="#ffffff"
-        app:layout_constraintStart_toStartOf="@+id/textSeminarKP"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_back"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -25,77 +26,86 @@
         android:layout_marginBottom="33dp"
         android:text="Seminar KP"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/backButton"
         app:layout_constraintVertical_bias="0.736" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="344dp"
-        android:layout_height="300dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="34dp"
-        android:background="@color/Bluesky"
-        android:orientation="vertical"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="40dp"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textSeminarKP">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="94dp"
-            android:layout_height="96dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/profil" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textNama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Nama : Khalil 'Amir"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/textNIM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="NIM : 2011522029"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            <TextView
+                android:id="@+id/textNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:text="Nama : Khalil 'Amir"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <TextView
-            android:id="@+id/textInstansi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Instansi : PT. Semen Padang"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            <TextView
+                android:id="@+id/textNIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:text="NIM : 2011522029"
+                app:layout_constraintEnd_toEndOf="@+id/textNama"
+                app:layout_constraintStart_toStartOf="@+id/textNama"
+                app:layout_constraintTop_toBottomOf="@+id/textNama" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textInstansi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/black"
+                android:text="Instansi : PT. Semen Padang"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textNIM"
+                app:layout_constraintStart_toStartOf="@+id/textNIM"
+                app:layout_constraintTop_toBottomOf="@+id/textNIM" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textJadwal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:text="Jadwal : dd-mm-yy"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/textLokasi"
