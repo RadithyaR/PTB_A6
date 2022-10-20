@@ -21,6 +21,7 @@
         android:id="@+id/textDetailMahasiswaKP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="33dp"
         android:text="Detail Mahasiswa KP"
@@ -30,14 +31,14 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/backButton"
-        app:layout_constraintVertical_bias="0.736" />
+        app:layout_constraintVertical_bias="0.846" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="344dp"
         android:layout_height="300dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="34dp"
         android:background="@color/Bluesky"
         android:orientation="vertical"
@@ -90,9 +91,12 @@
         android:id="@+id/logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="Logbook"
+        android:textStyle="bold"
+        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -102,6 +106,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="SeminarKP"
+        android:textStyle="bold"
+        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/logbook"
         app:layout_constraintStart_toStartOf="@+id/logbook"
         app:layout_constraintTop_toBottomOf="@+id/logbook" />
@@ -112,6 +118,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Pembimbing"
+        android:textStyle="bold"
+        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/seminarKP"
         app:layout_constraintStart_toStartOf="@+id/seminarKP"
         app:layout_constraintTop_toBottomOf="@+id/seminarKP" />
@@ -122,6 +130,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Nilai KP"
+        android:textStyle="bold"
+        android:backgroundTint="#139DEA"
         app:layout_constraintEnd_toEndOf="@+id/pembimbing"
         app:layout_constraintStart_toStartOf="@+id/pembimbing"
         app:layout_constraintTop_toBottomOf="@+id/pembimbing" />

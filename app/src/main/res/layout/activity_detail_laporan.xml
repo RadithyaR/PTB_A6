@@ -90,6 +90,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="26dp"
         android:text="Terima"
+        android:textStyle="bold"
+        android:backgroundTint="#139DEA"
         app:layout_constraintBottom_toTopOf="@+id/tolak"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
