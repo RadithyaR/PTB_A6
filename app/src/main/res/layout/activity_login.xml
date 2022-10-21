@@ -35,6 +35,7 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#139DEA"
         android:text="Login"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />

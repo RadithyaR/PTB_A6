@@ -105,7 +105,7 @@
         android:text="Nilai KP"
         android:textStyle="bold"
         android:backgroundTint="#139DEA"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/textPembatalan"
         app:layout_constraintStart_toStartOf="@+id/textPembatalan"
         app:layout_constraintTop_toBottomOf="@+id/textPembatalan" />
@@ -115,6 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textStyle="bold"
         android:backgroundTint="@color/red"
         android:text="Batalkan KP"
         app:layout_constraintEnd_toEndOf="@+id/nilaiKP"
