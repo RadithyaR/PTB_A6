@@ -26,7 +26,7 @@
         android:layout_marginBottom="38dp"
         android:text="Data Pembimbing"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
@@ -83,6 +83,7 @@
         android:layout_marginEnd="50dp"
         android:backgroundTint="@color/blue"
         android:text="Tambah"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

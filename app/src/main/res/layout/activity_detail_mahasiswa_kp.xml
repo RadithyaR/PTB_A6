@@ -37,6 +37,7 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/blue"
         android:text="Logbook"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -84,6 +85,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/red"
         android:text="Batalkan KP"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/nilaiKP"
         app:layout_constraintStart_toStartOf="@+id/nilaiKP"
         app:layout_constraintTop_toBottomOf="@+id/nilaiKP" />
