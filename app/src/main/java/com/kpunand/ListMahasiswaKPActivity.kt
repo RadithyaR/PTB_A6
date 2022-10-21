@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.adapters.ListMahasiswaKPAdapter
 import com.kpunand.models.ListMahasiswaKP
 
-class ListMahasiswaKP : AppCompatActivity() {
+class ListMahasiswaKPActivity : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: ListMahasiswaKPAdapter
@@ -26,7 +26,7 @@ class ListMahasiswaKP : AppCompatActivity() {
         lateinit var imageViewback: ImageView
         imageViewback = findViewById(R.id.backButton)
         imageViewback.setOnClickListener {
-            intent = Intent(this, Main::class.java)
+            intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -48,7 +48,7 @@ class ListMahasiswaKP : AppCompatActivity() {
         adapter = ListMahasiswaKPAdapter(data)
         adapter.setOnClickListener(object : ListMahasiswaKPAdapter.clickListener{
             override fun onItemClick(position: Int) {
-                val DetailListMahasiswaKP = Intent (this@ListMahasiswaKP, DetailMahasiswaKP::class.java)
+                val DetailListMahasiswaKP = Intent (this@ListMahasiswaKPActivity, DetailMahasiswaKPActivity::class.java)
                 startActivity(DetailListMahasiswaKP)
             }
         })

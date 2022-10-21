@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.adapters.ListUsulanKPAdapter
 import com.kpunand.models.ListUsulanKP
 
-class ListUsulanKP : AppCompatActivity() {
+class ListUsulanKPActivity : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: ListUsulanKPAdapter
@@ -26,7 +26,7 @@ class ListUsulanKP : AppCompatActivity() {
         lateinit var imageViewback: ImageView
         imageViewback = findViewById(R.id.backButton)
         imageViewback.setOnClickListener {
-            intent = Intent(this, Main::class.java)
+            intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -48,7 +48,7 @@ class ListUsulanKP : AppCompatActivity() {
         adapter = ListUsulanKPAdapter(data)
         adapter.setOnClickListener(object : ListUsulanKPAdapter.clickListener {
             override fun onItemClick(position: Int) {
-                val DetailUsulanKP = Intent(this@ListUsulanKP, DetailUsulanKP::class.java)
+                val DetailUsulanKP = Intent(this@ListUsulanKPActivity, DetailUsulanKPActivity::class.java)
                 startActivity(DetailUsulanKP)
             }
         })

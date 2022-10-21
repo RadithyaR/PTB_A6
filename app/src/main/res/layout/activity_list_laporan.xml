@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListLaporan">
+    tools:context=".ListLaporanActivity">
 
 
     <ImageView
@@ -31,13 +31,13 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/rvlaporan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rvlaporan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

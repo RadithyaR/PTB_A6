@@ -3,9 +3,9 @@ package com.kpunand
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Instansi : AppCompatActivity() {
+class DetailLaporanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_instansi)
+        setContentView(R.layout.activity_detail_laporan)
     }
 }

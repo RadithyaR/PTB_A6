@@ -23,46 +23,46 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ListUsulanKP"
+            android:name=".ListUsulanKPActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailUsulanKP"
+            android:name=".DetailUsulanKPActivity"
             android:exported="false" />
         <activity
-            android:name=".ListMahasiswaKP"
+            android:name=".ListMahasiswaKPActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailMahasiswaKP"
+            android:name=".DetailMahasiswaKPActivity"
             android:exported="false"/>
         <activity
-            android:name=".DataPembimbing"
+            android:name=".DataPembimbingActivity"
             android:exported="false"/>
         <activity
-            android:name=".TambahPembimbingKP"
+            android:name=".TambahPembimbingKPActivity"
             android:exported="false"/>
         <activity
-            android:name=".SeminarKP"
+            android:name=".SeminarKPActivity"
             android:exported="false"/>
         <activity
-            android:name=".PembatalanKP"
+            android:name=".PembatalanKPActivity"
             android:exported="false"/>
         <activity
-            android:name=".ListLogbook"
+            android:name=".ListLogbookActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailLogbook"
+            android:name=".DetailLogbookActivity"
             android:exported="false" />
         <activity
-            android:name=".ListLaporan"
+            android:name=".ListLaporanActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailLaporan"
+            android:name=".DetailLaporanActivity"
             android:exported="false" />
         <activity
-            android:name=".Instansi"
+            android:name=".InstansiActivity"
             android:exported="false" />
     </application>
 

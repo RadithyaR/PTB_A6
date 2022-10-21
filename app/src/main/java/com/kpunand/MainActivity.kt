@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class Main : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,22 +13,22 @@ class Main : AppCompatActivity() {
 
         val buttonMenu = findViewById<Button>(R.id.buttonMenumhs)
         buttonMenu.setOnClickListener{
-            val Intent = Intent(this, ListMahasiswaKP::class.java)
+            val Intent = Intent(this, ListMahasiswaKPActivity::class.java)
             startActivity(Intent)
         }
         val buttonUsul = findViewById<Button>(R.id.buttonUsulan)
         buttonUsul.setOnClickListener{
-            val Intent = Intent(this, ListUsulanKP::class.java)
+            val Intent = Intent(this, ListUsulanKPActivity::class.java)
             startActivity(Intent)
         }
         val buttonIns = findViewById<Button>(R.id.buttonInstansi)
         buttonIns.setOnClickListener{
-            val Intent = Intent(this, Instansi::class.java)
+            val Intent = Intent(this, InstansiActivity::class.java)
             startActivity(Intent)
         }
         val buttonLap = findViewById<Button>(R.id.buttonLaporan)
         buttonLap.setOnClickListener{
-            val Intent = Intent(this, ListLaporan::class.java)
+            val Intent = Intent(this, ListLaporanActivity::class.java)
             startActivity(Intent)
         }
     }

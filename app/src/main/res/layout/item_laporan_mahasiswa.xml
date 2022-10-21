@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/ic_person_login" />
 
         <TextView
-            android:id="@+id/namamhs"
+            android:id="@+id/lapnamamhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -44,24 +44,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/nimmhs"
+            android:id="@+id/lapnimmhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="7dp"
             android:textColor="@color/black"
             android:text="NIM Mahasiswa"
-            app:layout_constraintBottom_toTopOf="@+id/instansimhs"
-            app:layout_constraintStart_toStartOf="@+id/namamhs" />
+            app:layout_constraintBottom_toTopOf="@+id/lapinstansimhs"
+            app:layout_constraintStart_toStartOf="@+id/lapnamamhs" />
 
         <TextView
-            android:id="@+id/instansimhs"
+            android:id="@+id/lapinstansimhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:textColor="@color/black"
             android:text="Instansi"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/nimmhs" />
+            app:layout_constraintStart_toStartOf="@+id/lapnimmhs" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
