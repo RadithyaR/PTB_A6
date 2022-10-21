@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailLogbookActivity">
+    tools:context=".DetailLogbook">
 
     <ImageView
         android:id="@+id/backButton"
@@ -12,75 +12,57 @@
         android:layout_height="24dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="355dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textLogbook"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow" />
+        app:srcCompat="@drawable/ic_back" />
 
     <TextView
         android:id="@+id/textLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="271dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
         android:text="Detail Logbook"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textMahasiswa"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/backButton"
-        app:layout_constraintTop_toBottomOf="@+id/textKegiatan" />
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <TextView
         android:id="@+id/textMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="177dp"
         android:layout_marginBottom="14dp"
-        android:text="Nama\t\t\t\t\t\t\t\t: Khalil 'Amir\nNIM\t\t\t\t\t\t\t\t\t\t: 2011522029\nInstansi\t\t\t\t\t\t: PT Semen Padang\nWaktu\t\t\t\t\t\t\t\t: Senin/12-12-2022\nPembimbing\t: Pak"
+        android:text="Nama\t\t\t\t\t\t\t\t: Khalil 'Amir\nNIM\t\t\t\t\t\t\t\t\t: 2011522029\nInstansi\t\t\t\t\t\t: PT Semen Padang\nWaktu\t\t\t\t\t\t\t: Senin/12-12-2022\nPembimbing\t\t: Husnil Kamil, MT"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textKegiatan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textLogbook"
         app:layout_constraintTop_toBottomOf="@+id/textLogbook" />
 
     <TextView
         android:id="@+id/textKegiatan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="300dp"
+        android:layout_marginTop="50dp"
         android:text="Kegiatan\t: "
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textMahasiswa"
         app:layout_constraintTop_toBottomOf="@+id/textMahasiswa" />
 
     <TextView
         android:id="@+id/textDetailKegiatan"
         android:layout_width="312dp"
         android:layout_height="99dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginTop="20dp"
         android:text="Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Etiam ac elementum neque, id mattis libero. Vivamus ante urna, venenatis nec quam ut, tempus  facilisis sapien. Nullam hendrerit  placerat nisl et dictum. Nullam vitae orci"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textKegiatan"
         app:layout_constraintTop_toBottomOf="@+id/textKegiatan" />
 
 

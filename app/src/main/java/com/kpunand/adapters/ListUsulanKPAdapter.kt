@@ -6,25 +6,26 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.R
-import com.kpunand.models.MahasiswaKP
+import com.kpunand.models.ListMahasiswaKP
+import com.kpunand.models.ListUsulanKP
 
-class MahasiswaKPAdapter (private val data:ArrayList<MahasiswaKP>):
-    RecyclerView.Adapter<MahasiswaKPAdapter.MahasiswaKPViewHolder>(){
-    private lateinit var MahasiswaKPListener: clickListener
+class ListUsulanKPAdapter (private val data:ArrayList<ListUsulanKP>):
+    RecyclerView.Adapter<ListUsulanKPAdapter.UsulanKPViewHolder>(){
+    private lateinit var UsulanKPListener: clickListener
 
     interface clickListener {
         fun onItemClick(position: Int)
     }
 
     fun setOnClickListener(listener: clickListener) {
-        MahasiswaKPListener = listener
+        UsulanKPListener = listener
     }
 
-    inner class MahasiswaKPViewHolder(itemView: View, listener: clickListener):RecyclerView.ViewHolder(itemView) {
+    inner class UsulanKPViewHolder(itemView: View, listener: clickListener):RecyclerView.ViewHolder(itemView) {
         private val nama: TextView =itemView.findViewById(R.id.namamhs)
         private val nim:  TextView = itemView.findViewById(R.id.nimmhs)
 
-        fun bind(data: MahasiswaKP){
+        fun bind(data: ListUsulanKP){
             nama.text = data.nama
             nim.text = data.nim
         }
@@ -37,12 +38,12 @@ class MahasiswaKPAdapter (private val data:ArrayList<MahasiswaKP>):
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MahasiswaKPViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsulanKPViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_mahasiswa, parent, false)
-        return MahasiswaKPViewHolder(view, MahasiswaKPListener)
+        return UsulanKPViewHolder(view, UsulanKPListener)
     }
 
-    override fun onBindViewHolder(holder: MahasiswaKPViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UsulanKPViewHolder, position: Int) {
         holder.bind(data[position])
     }
 

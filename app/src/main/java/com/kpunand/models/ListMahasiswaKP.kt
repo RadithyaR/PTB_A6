@@ -2,7 +2,7 @@ package com.kpunand.models
 
 import android.widget.ImageView
 
-data class MahasiswaKP (
+data class ListMahasiswaKP (
     val id: Int,
     val gambar: ImageView?,
     val nama: String,

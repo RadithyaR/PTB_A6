@@ -3,9 +3,9 @@ package com.kpunand
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class UsulanKP : AppCompatActivity() {
+class DetailMahasiswaKP : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_usulan_kp)
+        setContentView(R.layout.activity_detail_mahasiswa_kp)
     }
 }

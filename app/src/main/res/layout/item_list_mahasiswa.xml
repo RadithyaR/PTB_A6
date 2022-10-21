@@ -19,40 +19,34 @@
             android:id="@+id/profilmhskp"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nimmhs"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.062"
+            app:layout_constraintVertical_bias="0.483"
             app:srcCompat="@drawable/ic_person_login" />
 
         <TextView
             android:id="@+id/namamhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="196dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
             android:layout_marginBottom="8dp"
             android:text="Nama Mahasiswa"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/nimmhs"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profilmhskp"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/nimmhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="208dp"
             android:layout_marginBottom="12dp"
             android:text="NIM Mahasiswa"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/namamhs" />
 
 
