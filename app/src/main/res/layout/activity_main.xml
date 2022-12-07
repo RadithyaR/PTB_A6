@@ -97,10 +97,24 @@
         android:text="List Laporan"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonInstansi"
         app:layout_constraintStart_toStartOf="@+id/buttonInstansi"
         app:layout_constraintTop_toBottomOf="@+id/buttonInstansi"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="test Notif"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLaporan"
+        app:layout_constraintStart_toStartOf="@+id/buttonLaporan"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLaporan"
+        app:layout_constraintVertical_bias="0.257"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
