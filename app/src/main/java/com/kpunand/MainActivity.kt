@@ -3,20 +3,45 @@ package com.kpunand
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.kpunand.Notifikasi.Companion.CHANNEL_ID
 
 
 class MainActivity : AppCompatActivity() {
 
 
+
     private lateinit var notificationManager: NotificationManagerCompat
+    val TAG = "MainActivity-Debug"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        FirebaseMessaging.getInstance().getToken()
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            Log.d(TAG, token)
+            Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
+        })
+
+        fun onNewToken(token: String) {
+            Log.d(TAG, "Refreshed token: $token")
+        }
 
         val buttonMenu = findViewById<Button>(R.id.buttonMenumhs)
         buttonMenu.setOnClickListener {
