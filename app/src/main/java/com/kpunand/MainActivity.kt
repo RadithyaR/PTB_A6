@@ -3,13 +3,9 @@ package com.kpunand
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.messaging.FirebaseMessaging
 import com.kpunand.Notifikasi.Companion.CHANNEL_ID
 
 
@@ -57,7 +53,6 @@ class MainActivity : AppCompatActivity() {
             with(NotificationManagerCompat.from(this)) {
                 // notificationId is a unique int for each notification that you must define
                 notify(1, builder.build())
-
             }
         }
     }
