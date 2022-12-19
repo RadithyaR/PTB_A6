@@ -9,7 +9,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.messaging.FirebaseMessaging
 import com.kpunand.datamodels.LoginResponse
 import com.kpunand.retrofit.Configuration
 import com.kpunand.retrofit.StoryClient
@@ -24,6 +26,21 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val TAG = "Login_Debug"
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            Log.d(TAG, token)
+        })
 
         //cek ada token atau ndak, kalo ada langsung ke MainActivity
         val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
