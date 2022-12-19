@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
         val ada = sharedPref.getString("token",null)
 
-        if (ada!=null){
+        if (ada != null){
             intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
 
                         val sharedPref = getSharedPreferences("prefs", MODE_PRIVATE)
                         with (sharedPref.edit()) {
-                            putString("token", token)
+                            putString("token" , token)
                             apply()
                         }
 

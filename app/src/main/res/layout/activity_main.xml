@@ -103,11 +103,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/btn_button"
+        android:id="@+id/buttonLogout"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:text="test Notif"
+        android:backgroundTint="@color/red"
+        android:text="Log Out"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
