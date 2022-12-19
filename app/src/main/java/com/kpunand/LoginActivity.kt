@@ -29,6 +29,12 @@ class LoginActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
         val ada = sharedPref.getString("token",null)
 
+        if (ada!=null){
+            intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         val buttonLog = findViewById<Button>(R.id.buttonLogin)
         buttonLog.setOnClickListener {
 
