@@ -1,18 +1,13 @@
 package com.kpunand
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import com.kpunand.Notifikasi.Companion.CHANNEL_ID
 
 
 class MainActivity : AppCompatActivity() {
-
-
-    private lateinit var notificationManager: NotificationManagerCompat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,23 +34,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent)
         }
 
-        notificationManager = NotificationManagerCompat.from(this)
 
-        val buttonNotif = findViewById<Button>(R.id.btn_button)
-        buttonNotif.setOnClickListener {
-            val title = "Notifikasi"
-            val message = "Ini adalah pesan yang masuk"
-            val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+        val buttonOut = findViewById<Button>(R.id.buttonLogout)
+        buttonOut.setOnClickListener{
 
-            with(NotificationManagerCompat.from(this)) {
-                // notificationId is a unique int for each notification that you must define
-                notify(1, builder.build())
-
+            val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE)
+            with (sharedPref.edit()) {
+                putString("token", null)
+                apply()
             }
+
+            intent = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
+        val sharedPref = getSharedPreferences("prefs",Context.MODE_PRIVATE) ?: return
+        val ada = sharedPref.getString("token",null)
+
+        if (ada==null){
+            intent = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 }
