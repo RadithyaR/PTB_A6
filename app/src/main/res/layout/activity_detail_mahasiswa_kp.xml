@@ -107,35 +107,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/textNama"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
-
             <TextView
                 android:id="@+id/textNama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Nama : Khalil 'Amir"
+                android:layout_marginTop="30dp"
+                android:text="Nama : DINDA SRI FATMA SARAGIH"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textNIM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="NIM : 2011522029"
+                android:text="NIM : 1711521009"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/textNama"
                 app:layout_constraintStart_toStartOf="@+id/textNama"
@@ -146,13 +134,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:text="Instansi : PT. Semen Padang"
+                android:text="Instansi : LPTIK"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textNIM"
                 app:layout_constraintStart_toStartOf="@+id/textNIM"
                 app:layout_constraintTop_toBottomOf="@+id/textNIM" />
+
+            <TextView
+                android:id="@+id/textInstansi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="Judul: Pembuatan Aplikasi X di perusahaan Y"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textInstansi"
+                app:layout_constraintStart_toStartOf="@+id/textInstansi"
+                app:layout_constraintTop_toBottomOf="@+id/textInstansi" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
