@@ -38,7 +38,9 @@ class ListMahasiswaKPAdapter (private val data:ArrayList<ListMahasiswaKP>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MahasiswaKPViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_mahasiswa, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_list_mahasiswa, parent, false)
+
         return MahasiswaKPViewHolder(view, MahasiswaKPListener)
     }
 

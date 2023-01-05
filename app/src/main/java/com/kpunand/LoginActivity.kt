@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.messaging.FirebaseMessaging
 import com.kpunand.datamodels.LoginResponse
+import com.kpunand.datamodels.User
 import com.kpunand.retrofit.Configuration
 import com.kpunand.retrofit.StoryClient
 import kotlinx.android.synthetic.main.activity_login.view.*
@@ -27,22 +28,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val TAG = "Login_Debug"
-
-        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
-                return@OnCompleteListener
-            }
-
-            // Get new FCM registration token
-            val token = task.result
-
-            // Log and toast
-            Log.d(TAG, token)
-        })
-
-        //cek ada token atau ndak, kalo ada langsung ke MainActivity
+        //cek ada token atau ndak
         val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
         val ada = sharedPref.getString("token",null)
 
@@ -78,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
 
                     val respon: LoginResponse? = response.body();
 
-                    if (respon != null && respon.status == "success" && respon.user?.username == "198201182008121002") {
+                    if (respon != null && respon.status == "success" ) {
                         Toast.makeText(this@LoginActivity, "Berhasil Login", Toast.LENGTH_SHORT).show()
 
                         val token : String? = respon.authorisation?.token
@@ -92,10 +78,6 @@ class LoginActivity : AppCompatActivity() {
                         intent = Intent(applicationContext, MainActivity::class.java)
                         startActivity(intent)
                         finish()
-                    }
-
-                    else if (respon != null && respon.status == "success" && respon.user?.username != "198201182008121002"){
-                        Toast.makeText(this@LoginActivity, "Anda bukan pak husnil", Toast.LENGTH_SHORT).show()
                     }
 
                     else {

@@ -77,7 +77,7 @@
             android:name=".DetailLaporanActivity"
             android:exported="false" />
         <activity
-            android:name=".InstansiActivity"
+            android:name=".ListInstansiActivity"
             android:exported="false" />
         <service
             android:name=".MyFirebaseMessagingService"

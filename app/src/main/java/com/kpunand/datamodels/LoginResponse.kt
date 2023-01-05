@@ -10,8 +10,12 @@ data class LoginResponse(
     @field:SerializedName("user")
     val user: User? = null,
 
+    @field:SerializedName("email")
+    val email: User? = null,
+
     @field:SerializedName("status")
     val status: String? = null
+
 )
 
 

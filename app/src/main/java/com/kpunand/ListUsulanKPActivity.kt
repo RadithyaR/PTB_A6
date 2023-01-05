@@ -1,13 +1,24 @@
 package com.kpunand
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.adapters.ListUsulanKPAdapter
-import com.kpunand.models.ListUsulanKP
+import com.kpunand.datamodels.ListUsulanResponse
+import com.kpunand.datamodels.ProposalsItem
+import com.kpunand.retrofit.Configuration
+import com.kpunand.retrofit.StoryClient
+import kotlinx.android.synthetic.main.activity_instansi.*
+import kotlinx.android.synthetic.main.activity_list_usulan_kp.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ListUsulanKPActivity : AppCompatActivity() {
 
@@ -18,34 +29,49 @@ class ListUsulanKPActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_usulan_kp)
 
-        init()
+        val adapter = ListUsulanKPAdapter()
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+        val sharedPref: SharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
+        val token = sharedPref.getString("token", null)
 
-        lateinit var imageViewback: ImageView
-        imageViewback = findViewById(R.id.backButton)
-        imageViewback.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-    }
+        val data = ArrayList<ProposalsItem>()
 
-    private fun init() {
-        recyclerView = findViewById(R.id.rvusulankp)
+        rvusulankp.setHasFixedSize(true)
+        rvusulankp.layoutManager = LinearLayoutManager(this)
+        rvusulankp.adapter = adapter
 
-        val data = ArrayList<ListUsulanKP>()
-        data.add(ListUsulanKP(1, null, "Radithya Romero A", "2011521007"))
-        data.add(ListUsulanKP(1, null, "Khalil 'Amir", "201152029"))
-        data.add(ListUsulanKP(1, null, "Alia Nurhikmah", "2011522009"))
+        val client: StoryClient = Configuration().getService()
+        val call: Call<ListUsulanResponse> = client.getUsulan("Bearer" +token)
+            call.enqueue(object: Callback<ListUsulanResponse>{
+                override fun onResponse(
+                    call: Call<ListUsulanResponse>,
+                    response: Response<ListUsulanResponse>
+                ) {
+                    val respon: ListUsulanResponse? = response.body()
+                    if (respon!= null){
+                        val list: List<ProposalsItem> = respon.proposals as List<ProposalsItem>
+                        adapter.setListUsulan(list)
+                    }
+                    Log.d("success", response.toString())
 
-        adapter = ListUsulanKPAdapter(data)
-        adapter.setOnClickListener(object : ListUsulanKPAdapter.clickListener {
-            override fun onItemClick(position: Int) {
-                val DetailUsulanKP = Intent(this@ListUsulanKPActivity, DetailUsulanKPActivity::class.java)
-                startActivity(DetailUsulanKP)
-            }
-        })
+                    adapter.setOnClickListener(object: ListUsulanKPAdapter.clickListener{
+                        override fun onItemClick(position: Int) {
+                            val DetailUsulanKPActivity = Intent(this@ListUsulanKPActivity, DetailUsulanKPActivity::class.java)
+                            startActivity(DetailUsulanKPActivity)
+
+                            Toast.makeText(this@ListUsulanKPActivity, "berhasil masuk", Toast.LENGTH_SHORT).show()
+                        }
+                    })
+                }
+
+                override fun onFailure(call: Call<ListUsulanResponse>, t: Throwable) {
+                    Toast.makeText(this@ListUsulanKPActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
+                }
+            })
+
+
+
+
 
     }
 }

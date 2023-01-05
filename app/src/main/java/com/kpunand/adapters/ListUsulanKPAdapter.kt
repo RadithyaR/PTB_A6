@@ -6,29 +6,34 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.R
-import com.kpunand.models.ListMahasiswaKP
-import com.kpunand.models.ListUsulanKP
+import com.kpunand.datamodels.CompaniesItem
+import com.kpunand.datamodels.ProposalsItem
+import kotlinx.android.synthetic.main.item_mahasiswa_usulan_kp.view.*
 
-class ListUsulanKPAdapter (private val data:ArrayList<ListUsulanKP>):
-    RecyclerView.Adapter<ListUsulanKPAdapter.UsulanKPViewHolder>(){
-    private lateinit var UsulanKPListener: clickListener
+class ListUsulanKPAdapter()
+    : RecyclerView.Adapter<ListUsulanKPAdapter.UsulanKPViewHolder>(){
+
+    private lateinit var UsulanListener: clickListener
+
+    var listUsulann: List<ProposalsItem> = ArrayList()
+
+    fun setListUsulan(listUsulan: List<ProposalsItem>){
+        this.listUsulann = listUsulan
+        notifyDataSetChanged()
+    }
 
     interface clickListener {
         fun onItemClick(position: Int)
     }
 
     fun setOnClickListener(listener: clickListener) {
-        UsulanKPListener = listener
+        UsulanListener = listener
     }
 
-    inner class UsulanKPViewHolder(itemView: View, listener: clickListener):RecyclerView.ViewHolder(itemView) {
-        private val nama: TextView =itemView.findViewById(R.id.namamhs)
-        private val nim:  TextView = itemView.findViewById(R.id.nimmhs)
-
-        fun bind(data: ListUsulanKP){
-            nama.text = data.nama
-            nim.text = data.nim
-        }
+    inner class UsulanKPViewHolder(itemView: View, listener: clickListener): RecyclerView.ViewHolder(itemView){
+        val nama: TextView =itemView.findViewById(R.id.namaProposal)
+        val tglMulai: TextView = itemView.findViewById(R.id.mulaiProposal)
+        val tglSelesai: TextView = itemView.findViewById(R.id.selesaiProposal)
 
         init {
             itemView.setOnClickListener {
@@ -39,16 +44,21 @@ class ListUsulanKPAdapter (private val data:ArrayList<ListUsulanKP>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsulanKPViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_mahasiswa, parent, false)
-        return UsulanKPViewHolder(view, UsulanKPListener)
-    }
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_mahasiswa_usulan_kp, parent, false)
 
-    override fun onBindViewHolder(holder: UsulanKPViewHolder, position: Int) {
-        holder.bind(data[position])
+        return UsulanKPViewHolder(view, UsulanListener)
     }
 
     override fun getItemCount(): Int {
-        return data.size
+        return listUsulann.size}
+
+    override fun onBindViewHolder(holder: UsulanKPViewHolder, position: Int) {
+        val item: ProposalsItem = listUsulann.get(position)
+        holder.nama.text = item.name
+        holder.tglMulai.text = item.startAt
+        holder.tglSelesai.text = item.endAt
     }
+
 
 }

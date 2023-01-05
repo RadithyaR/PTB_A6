@@ -2,6 +2,7 @@ package com.kpunand
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE) ?: return
+        val token = sharedPref.getString("token", " ")
+
+        if (token==null){
+            intent = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val buttonMenu = findViewById<Button>(R.id.buttonMenumhs)
         buttonMenu.setOnClickListener {
@@ -25,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
         val buttonIns = findViewById<Button>(R.id.buttonInstansi)
         buttonIns.setOnClickListener {
-            val Intent = Intent(this, InstansiActivity::class.java)
+            val Intent = Intent(this, ListInstansiActivity::class.java)
             startActivity(Intent)
         }
         val buttonLap = findViewById<Button>(R.id.buttonLaporan)
@@ -33,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             val Intent = Intent(this, ListLaporanActivity::class.java)
             startActivity(Intent)
         }
-
 
         val buttonOut = findViewById<Button>(R.id.buttonLogout)
         buttonOut.setOnClickListener{
@@ -44,14 +53,6 @@ class MainActivity : AppCompatActivity() {
                 apply()
             }
 
-            intent = Intent(applicationContext, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val sharedPref = getSharedPreferences("prefs",Context.MODE_PRIVATE) ?: return
-        val ada = sharedPref.getString("token",null)
-
-        if (ada==null){
             intent = Intent(applicationContext, LoginActivity::class.java)
             startActivity(intent)
             finish()
