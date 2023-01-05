@@ -59,7 +59,7 @@ class ListUsulanKPActivity : AppCompatActivity() {
                             val DetailUsulanKPActivity = Intent(this@ListUsulanKPActivity, DetailUsulanKPActivity::class.java)
                             startActivity(DetailUsulanKPActivity)
 
-                            Toast.makeText(this@ListUsulanKPActivity, "berhasil masuk", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ListUsulanKPActivity, "berhasil hehe", Toast.LENGTH_SHORT).show()
                         }
                     })
                 }
