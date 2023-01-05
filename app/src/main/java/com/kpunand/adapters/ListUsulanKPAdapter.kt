@@ -15,10 +15,10 @@ class ListUsulanKPAdapter()
 
     private lateinit var UsulanListener: clickListener
 
-    var listUsulann: List<ProposalsItem> = ArrayList()
+    var listProposal: List<ProposalsItem> = ArrayList()
 
     fun setListUsulan(listUsulan: List<ProposalsItem>){
-        this.listUsulann = listUsulan
+        this.listProposal = listUsulan
         notifyDataSetChanged()
     }
 
@@ -51,10 +51,10 @@ class ListUsulanKPAdapter()
     }
 
     override fun getItemCount(): Int {
-        return listUsulann.size}
+        return listProposal.size}
 
     override fun onBindViewHolder(holder: UsulanKPViewHolder, position: Int) {
-        val item: ProposalsItem = listUsulann.get(position)
+        val item: ProposalsItem = listProposal.get(position)
         holder.nama.text = item.name
         holder.tglMulai.text = item.startAt
         holder.tglSelesai.text = item.endAt

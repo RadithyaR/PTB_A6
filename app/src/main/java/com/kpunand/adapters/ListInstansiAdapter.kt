@@ -13,10 +13,10 @@ class ListInstansiAdapter ()
 
     private lateinit var InstansiListener: clickListener
 
-    var listIntansii: List<CompaniesItem> = ArrayList()
+    var listPerusahaan: List<CompaniesItem> = ArrayList()
 
     fun setListIntansi(listIntansi: List<CompaniesItem>){
-        this.listIntansii = listIntansi
+        this.listPerusahaan = listIntansi
         notifyDataSetChanged()
     }
 
@@ -49,13 +49,19 @@ class ListInstansiAdapter ()
     }
 
     override fun getItemCount(): Int {
-        return listIntansii.size
+        return listPerusahaan.size
     }
 
     override fun onBindViewHolder(holder: InstansiViewHolder, position: Int) {
-        val item: CompaniesItem = listIntansii.get(position)
+        val item: CompaniesItem = listPerusahaan.get(position)
         holder.nama.text = item.name
         holder.alamat.text = item.address
-        holder.status.text = item.status.toString()
+
+        if(item.status == 1){
+            holder.status.text = "Proposed"
+        }
+        else if (item.status == 2){
+            holder.status.text = "On Field"
+        }
     }
 }
