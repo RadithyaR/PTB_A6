@@ -14,7 +14,7 @@ data class DetailUsulanResponse(
     val name: String? = null,
 
     @field:SerializedName("students")
-    val students: List<MahasiswaItem?>? = null,
+    val students: List<MahasiswaItem?>? = null,//belum dimasukkan
 
     @field:SerializedName("id")
     val id: Int? = null,
