@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 
 class DetailMahasiswaKPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,5 +23,10 @@ class DetailMahasiswaKPActivity : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        val buttonBatal = findViewById<Button>(R.id.batalkanKP)
+        buttonBatal.setOnClickListener {
+            val Intent = Intent(this, PembatalanKPActivity::class.java)
+            startActivity(Intent)
+        }
     }
 }

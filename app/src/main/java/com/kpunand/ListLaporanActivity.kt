@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kpunand.adapters.ListLaporanKPAdapter
 import com.kpunand.models.ListLaporanKP
 
+
+
 class ListLaporanActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: ListLaporanKPAdapter
@@ -34,9 +36,9 @@ class ListLaporanActivity : AppCompatActivity() {
         recyclerView =findViewById(R.id.rvlaporan)
 
         val data = ArrayList<ListLaporanKP>()
-        data.add(ListLaporanKP(1,null,"Radithya Romero A", "2011521007", "Gojek"))
-        data.add(ListLaporanKP(1,null,"Khalil 'Amir", "201152029", "Semen Padang"))
-        data.add(ListLaporanKP(1,null,"Alia Nurhikmah", "2011522009", "Grab"))
+        data.add(ListLaporanKP(1,null,"Radithya Romero", "2011521007", "Grab"))
+        data.add(ListLaporanKP(1,null,"Alia Nurhikmah ", "2011521009", "Gojek"))
+
 
         adapter = ListLaporanKPAdapter(data)
         adapter.setOnClickListener(object : ListLaporanKPAdapter.clickListener{
@@ -45,6 +47,6 @@ class ListLaporanActivity : AppCompatActivity() {
                 startActivity(DetailListLaporanKP)
             }
         })
-
     }
+
 }

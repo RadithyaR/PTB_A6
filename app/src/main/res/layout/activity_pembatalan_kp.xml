@@ -36,24 +36,22 @@
         android:id="@+id/textPembatalan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Anda yakin akan membatalkan  status KP-nya?"
+        android:layout_marginTop="32dp"
+        android:text="Anda yakin akan membatalkan status KP-nya?"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="344dp"
-        android:layout_height="300dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="34dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="144dp"
         android:background="@color/Bluesky"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -71,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="Nama : Khalil 'Amir"
+            android:text="Nama: Alia Nurhikmah"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
@@ -81,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="NIM : 2011522029"
+            android:text="NIM : 2011522009"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
@@ -95,32 +93,51 @@
             android:textColor="@color/black"
             android:textSize="16dp" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textDosenPembimbing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Dosen Pembimbing"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
-    <Button
-        android:id="@+id/nilaiKP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Nilai KP"
-        android:textStyle="bold"
-        android:backgroundTint="#139DEA"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textPembatalan"
-        app:layout_constraintStart_toStartOf="@+id/textPembatalan"
-        app:layout_constraintTop_toBottomOf="@+id/textPembatalan" />
+        <TextView
+            android:id="@+id/textselesaiKP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Tanggal Seminar KP"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textNilaiKP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Nilai KP"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/batalkanKP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="72dp"
         android:backgroundTint="@color/red"
         android:text="Batalkan KP"
-        app:layout_constraintEnd_toEndOf="@+id/nilaiKP"
-        app:layout_constraintStart_toStartOf="@+id/nilaiKP"
-        app:layout_constraintTop_toBottomOf="@+id/nilaiKP" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textPembatalan"
+        app:layout_constraintStart_toStartOf="@+id/textPembatalan"
+        app:layout_constraintTop_toBottomOf="@+id/textPembatalan" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
