@@ -42,7 +42,7 @@ class ListUsulanKPActivity : AppCompatActivity() {
 
         val client: StoryClient = Configuration().getService()
         val call: Call<ListUsulanResponse> = client.getUsulan("Bearer" +token)
-            call.enqueue(object: Callback<ListUsulanResponse>{
+        call.enqueue(object: Callback<ListUsulanResponse>{
                 override fun onResponse(
                     call: Call<ListUsulanResponse>,
                     response: Response<ListUsulanResponse>

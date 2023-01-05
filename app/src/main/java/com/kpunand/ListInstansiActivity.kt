@@ -35,10 +35,13 @@ class ListInstansiActivity : AppCompatActivity() {
         if (token != null) {
             Log.d("tokennnnn", token)
         }
+        rvInstansi.setHasFixedSize(true)
+        rvInstansi.layoutManager = LinearLayoutManager(this)
+        rvInstansi.adapter = adapter
 
         val client: StoryClient = Configuration().getService()
         val call: Call<ListInstansiResponse> = client.getInstansi("Bearer " +token)
-            call.enqueue(object: Callback<ListInstansiResponse> {
+        call.enqueue(object: Callback<ListInstansiResponse> {
                 override fun onResponse(
                     call: Call<ListInstansiResponse>,
                     response: Response<ListInstansiResponse>)
@@ -58,13 +61,10 @@ class ListInstansiActivity : AppCompatActivity() {
 
             })
 
-        rvInstansi.setHasFixedSize(true)
-        rvInstansi.layoutManager = LinearLayoutManager(this)
-        rvInstansi.adapter = adapter
+
 
         adapter.setOnClickListener(object : ListInstansiAdapter.clickListener{
             override fun onItemClick(position: Int) {
-                val DetailInstansiActivity = Intent (this@ListInstansiActivity, DetailLaporanActivity::class.java)
                 Toast.makeText(this@ListInstansiActivity, "Udah bisa tekan", Toast.LENGTH_SHORT).show()
             }
         })

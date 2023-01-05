@@ -1,6 +1,5 @@
 package com.kpunand.retrofit
 
-import android.icu.number.IntegerWidth
 import com.kpunand.datamodels.*
 import retrofit2.Call
 import retrofit2.http.*
