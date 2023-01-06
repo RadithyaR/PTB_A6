@@ -1,10 +1,10 @@
 package com.kpunand
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class PembatalanKPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +13,7 @@ class PembatalanKPActivity : AppCompatActivity() {
 
         val buttonBatal = findViewById<Button>(R.id.batalkanKP)
         buttonBatal.setOnClickListener {
+            Toast.makeText(this@PembatalanKPActivity, "Mahasiswa KP dibatalkan", Toast.LENGTH_SHORT).show()
             val Intent = Intent(this, MainActivity::class.java)
             startActivity(Intent)
         }
