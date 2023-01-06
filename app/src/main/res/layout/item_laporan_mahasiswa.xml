@@ -17,39 +17,36 @@
 
         <ImageView
             android:id="@+id/profilmhs"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nimmhs"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.062"
+            app:layout_constraintVertical_bias="0.483"
             app:srcCompat="@drawable/ic_person_login" />
 
         <TextView
             android:id="@+id/lapnamamhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="196dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="188dp"
             android:layout_marginBottom="8dp"
             android:text="Nama Mahasiswa"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/nimmhs"
+            app:layout_constraintBottom_toTopOf="@+id/lapnimmhs"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/lapnimmhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
             android:text="NIM Mahasiswa"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/lapinstansimhs"
             app:layout_constraintStart_toStartOf="@+id/lapnamamhs" />
 
@@ -57,12 +54,11 @@
             android:id="@+id/lapinstansimhs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="7dp"
             android:textColor="@color/black"
             android:text="Instansi"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/lapnimmhs" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

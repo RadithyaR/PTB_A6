@@ -38,6 +38,9 @@ class ListMahasiswaKPActivity : AppCompatActivity() {
         data.add(ListMahasiswaKP(1,null,"Radithya Romero A", "2011521007"))
         data.add(ListMahasiswaKP(1,null,"Khalil 'Amir", "201152029"))
         data.add(ListMahasiswaKP(1,null,"Alia Nurhikmah", "2011522009"))
+        data.add(ListMahasiswaKP(1,null,"Ani", "2011521007"))
+        data.add(ListMahasiswaKP(1,null,"Budi", "201152029"))
+        data.add(ListMahasiswaKP(1,null,"Nur", "2011522009"))
 
         adapter = ListMahasiswaKPAdapter(data)
         adapter.setOnClickListener(object : ListMahasiswaKPAdapter.clickListener{

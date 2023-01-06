@@ -1,140 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailLaporanActivity">
-
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="355dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/textDetailMahasiswaKP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailLogbookActivity">
 
     <TextView
         android:id="@+id/textDetailMahasiswaKP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="4dp"
         android:text="Laporan Mahasiswa"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/backButton" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginVertical="40dp"
-        android:padding="10dp"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="50dp"
+        android:padding="15dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="6dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDetailMahasiswaKP">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_gravity="center">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="515dp"
             android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/textNama"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/textNama"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Nama : Khalil 'Amir"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
+                android:text="Nama                                 :"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textNIM"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="NIM : 2011522029"
+                android:layout_marginTop="16dp"
+                android:text="NIM                                    :"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textNama"
                 app:layout_constraintStart_toStartOf="@+id/textNama"
                 app:layout_constraintTop_toBottomOf="@+id/textNama" />
 
             <TextView
                 android:id="@+id/textInstansi"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:text="Instansi                             :"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textNIM"
+                app:layout_constraintTop_toBottomOf="@+id/textNIM"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textDosen"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dosen Pembimbing         :"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textInstansi"
+                app:layout_constraintStart_toStartOf="@+id/textInstansi"
+                app:layout_constraintTop_toBottomOf="@+id/textInstansi" />
+
+            <TextView
+                android:id="@+id/textTanggalSelesaiKP"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
+                android:text="Tanggal Seminar KP       :"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textDosen"
+                app:layout_constraintTop_toBottomOf="@+id/textDosen"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textNilaiAkhirKp"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nilai KP                             :"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textTanggalSelesaiKP"
+                app:layout_constraintStart_toStartOf="@+id/textTanggalSelesaiKP"
+                app:layout_constraintTop_toBottomOf="@+id/textTanggalSelesaiKP" />
+
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:text="Instansi : PT. Semen Padang"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textNIM"
-                app:layout_constraintStart_toStartOf="@+id/textNIM"
-                app:layout_constraintTop_toBottomOf="@+id/textNIM" />
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="224dp"
+                android:text="Alia Nurhikmah"
+                android:textColor="#252020"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="2011522009"
+                android:textColor="#252020"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Semen Padang"
+                android:textColor="#252020"
+                android:textColorHint="#201F1F"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Husnil Kamil"
+                android:textColor="#252020"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="13 Februari 2023"
+                android:textColor="#252020"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="A"
+                android:textColor="#252020"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textLap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="52dp"
-        android:text="Instansi\t\t\t\t\t: PT Semen Padang\nLokasi\t\t\t\t\t\t: Padang\nPembimbing\t: Pak Ricky\nNilai KP\t\t\t\t\t: 4.00"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/terima"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-    <Button
-        android:id="@+id/terima"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
-        android:text="Terima"
-        android:textStyle="bold"
-        android:backgroundTint="#139DEA"
-        app:layout_constraintBottom_toTopOf="@+id/tolak"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/tolak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/red"
-        android:text="Tolak"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/terima" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
