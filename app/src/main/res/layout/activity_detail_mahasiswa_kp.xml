@@ -197,9 +197,11 @@
                 android:id="@+id/namaDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="DINDA SRI FATMA SARAGIH"
+                android:textColor="#020202"
                 app:layout_constraintBottom_toBottomOf="@+id/textView15"
-                app:layout_constraintStart_toStartOf="@+id/judulDetail"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
                 app:layout_constraintTop_toTopOf="@+id/textView15" />
 
             <TextView
@@ -207,8 +209,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1711521009"
+                android:textColor="#020202"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
-                app:layout_constraintStart_toStartOf="@+id/judulDetail"
+                app:layout_constraintStart_toStartOf="@+id/namaDetail"
                 app:layout_constraintTop_toTopOf="@+id/textView16" />
 
             <TextView
@@ -216,21 +219,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LPTIK"
+                android:textColor="#020202"
                 app:layout_constraintBottom_toBottomOf="@+id/textView17"
-                app:layout_constraintStart_toStartOf="@+id/judulDetail"
+                app:layout_constraintStart_toStartOf="@+id/nimDetail"
                 app:layout_constraintTop_toTopOf="@+id/textView17" />
 
             <TextView
                 android:id="@+id/judulDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="129dp"
-                android:text="Pembuatan Aplikasi X di perusahaan Y"
-                app:layout_constraintBottom_toBottomOf="@+id/textView18"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView18"
-                app:layout_constraintTop_toTopOf="@+id/textView18" />
+                android:layout_marginTop="10dp"
+                android:text="Pembuatan Aplikasi X"
+                android:textColor="#020202"
+                app:layout_constraintStart_toStartOf="@+id/instansiDetail"
+                app:layout_constraintTop_toBottomOf="@+id/instansiDetail" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
