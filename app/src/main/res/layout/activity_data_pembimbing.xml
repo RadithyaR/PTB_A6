@@ -59,33 +59,27 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="25dp"
-            android:text="Husnil Kamil, M.T"
+            android:text="Husnil Kamil"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <ImageButton
+        <Button
             android:id="@+id/no"
-            android:layout_width="24sp"
-            android:layout_height="24sp"
-            android:layout_marginLeft="260dp"
-            android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/ic_no"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/white"
+            android:drawableBottom="@drawable/ic_no"
+            android:text="Tambah"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/tambahPembimbing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/blue"
-        android:text="Tambah"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

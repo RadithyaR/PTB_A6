@@ -10,9 +10,17 @@ class DetailMahasiswaKPActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_mahasiswa_kp)
 
+
+
         val buttonLogbook = findViewById<Button>(R.id.logbook)
         buttonLogbook.setOnClickListener {
             val Intent = Intent(this, ListLogbookActivity::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonPembimbing = findViewById<Button>(R.id.pembimbing)
+        buttonPembimbing.setOnClickListener {
+            val Intent = Intent(this, DataPembimbingActivity::class.java)
             startActivity(Intent)
         }
 
